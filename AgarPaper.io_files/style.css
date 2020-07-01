@@ -1,0 +1,131 @@
+body { position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: 0; border: none; overflow: hidden; background: #fff; font-family: 'Changa', sans-serif; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+
+#paperio { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+#message { position: absolute; top: 98px; left: 0; right: 0; }
+#left { position: absolute; top: 0; bottom: 0; left: 0; width: calc(50% - 340px); z-index: 1; }
+#right { position: absolute; top: 0; bottom: 0; right: 0; width: calc(50% - 340px); z-index: 1; }
+#bottom { position: absolute; top: 320px; left: 0; right: 0; bottom: 0; z-index: 1; height:330px; }
+#share { position: absolute; top: 0; left: 0; z-index: 2; }
+#links { position: absolute; bottom: 0; right: 0; z-index: 2; }	
+#overlay { display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: 0; background: rgba(0,0,0,.8); z-index: 1; }
+#text { display: none; position: absolute; z-index: 101; }
+
+/*
+#left, #right { background: rgba(0,255,0,.3); }
+#bottom { background: rgba(0,0,255,.3); }
+#share { background: rgba(255,0,255,.3); }
+#links { background: rgba(255,255,255,.3); }
+*/
+
+#pre_game  { display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: 0; width: 100%; height: 400px; overflow: hidden;  }
+.dark, #dark { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,.8); }
+#white { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #ffffff; }
+
+#pre_game  { display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: 0; width: 100%; height: 100%; overflow: hidden; background: #dff3f7; }
+#pre_game .dark, #dark { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,.8); }
+#pre_game .logo { position: absolute; top: 15px; left: 50%; width: 500px; height: 160px; margin-left: -250px; background: url('../images/logo.png') center center no-repeat; background-size: contain; }
+#pre_game .grow { position: absolute; left: 50%; margin-left: -168px; width: 336px; top: 250px; }
+#pre_game .grow { animation: leaves 2s ease-in-out infinite alternate; -webkit-animation: leaves 2s ease-in-out infinite alternate; }
+#pre_game input,#contact .button { position: absolute; left: 0px; top: 0px; padding: 15px 5px; text-indent: 10px; border: 0; height: 30px; width: 216px; line-height: 30px; font-size: 25px; background: #ededd1; border-bottom: 6px solid #a1a18d; outline: none; }
+#contact .button { text-indent: 0; }
+#pre_game .button,#contact .button { position: absolute; right: 0px; top: 2px; padding: 15px 5px; text-align: center; cursor: pointer; height: 30px; width: 90px; }
+#pre_game .button,#contact .button { background:#eaec4b; border-bottom:6px solid #a1a130; margin-top:-2px; color: #888a34; line-height: 32px; font-size: 34px; }
+#pre_game .button:hover,#contact .button:hover { background: #fafc5b; }
+#pre_game .button:active,#contact .button:active { border: none; border-bottom:2px solid #a1a130; border-top: 4px solid #333; }
+@keyframes leaves { 0% { transform: scale(1.0); -webkit-transform: scale(1.0); } 100% { transform: scale(0.9); -webkit-transform: scale(0.9); } }
+@-webkit-keyframes leaves { 0% { transform: scale(1.0); -webkit-transform: scale(1.0); } 100% { transform: scale(0.9); -webkit-transform: scale(0.9); } }
+#pre_game:before { content:''; box-shadow: inset 0 0 320px #80969e; -webkit-box-shadow: inset 0 0 320px #80969e; position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+#pre_game .loader {position: absolute; right: 0px; top: 2px; padding: 15px 5px; background: url('/images/espera.gif') center center no-repeat; height: 30px; width: 90px; }
+#pre_game .noConnectBtn {cursor: pointer; position: absolute; text-align: center; right: -40px; top: 2px; padding: 15px 5px; background:#F16745; border-bottom:6px solid #83220A; margin-top:-2px; color: #431205; line-height: 32px; font-size: 24px; height: 30px; width: 130px; }
+#pre_game .noConnectText {position: absolute; right: 5px; top: -35px; font-size: 24px; color:#ffc172; }
+
+
+
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+#game_over { display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: 0; width: 100%; height: 100%; overflow: hidden; }
+#game_over { background: rgba(0,0,0,.8); z-index: 1; }
+#game_over .gameover { position: absolute; top: 12px; left: 50%; width: 336px; height: 116px; margin-left: -168px; background: url('../images/logo.png') center center no-repeat; background-size: contain; }
+
+#game_over .go_sc { position: absolute; top: 129px; left: 50%; margin-left: -168px; font-size: 24px; color: #bcd; line-height: 40px; }
+#game_over .go_bs { position: absolute; top: 156px; left: 50%; margin-left: -168px; font-size: 24px; color: #bcd; line-height: 40px; }
+#game_over .go_bs span { color: #8fa; }
+#game_over .go_pt { position: absolute; top: 183px; left: 50%; margin-left: -168px; font-size: 24px; color: #bcd; line-height: 40px; }
+#game_over .go_pk { position: absolute; top: 210px; left: 50%; margin-left: -168px; font-size: 24px; color: #bcd; line-height: 40px; }
+#game_over .da_sc { position: absolute; top: 129px; left: 50%; margin-left: 40px; font-size: 24px; color: #def; line-height: 40px; }
+#game_over .da_bs { position: absolute; top: 156px; left: 50%; margin-left: 40px; font-size: 24px; color: #def; line-height: 40px; }
+#game_over .da_pt { position: absolute; top: 183px; left: 50%; margin-left: 40px; font-size: 24px; color: #def; line-height: 40px; }
+#game_over .da_pk { position: absolute; top: 210px; left: 50%; margin-left: 40px; font-size: 24px; color: #def; line-height: 40px; }
+
+#game_over .button { position: absolute; left: 50%; top: 262px; margin-left: -118px; padding: 15px 5px; text-align: center; cursor: pointer; height: 30px; width: 226px; }
+#game_over .button { background:#eaec4b; border-bottom:6px solid #a1a130; margin-top:-2px; color: #888a34; line-height: 32px; font-size: 34px; }
+#game_over .button:hover { background: #fafc5b; }
+#game_over .button:active { border: none; border-bottom:2px solid #a1a130; border-top: 4px solid #333; }
+
+#game_over .button.share { background:#4c82ed; border-bottom:6px solid #3056a1; margin-top:-2px; color: rgba(255,255,255,.8); line-height: 32px; font-size: 34px; }
+#game_over .button.share:hover { background: #5b91fc; }
+#game_over .button.share:active { border: none; border-bottom:2px solid #3056a1; border-top: 4px solid #333; }
+
+#text { top: 50%; left: 50%; width: 800px; max-width: calc(90% - 40px); transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); background: #eaec4b; border: 2px solid #a1a130; border-radius: 20px; padding: 30px 30px 20px 30px; }
+#text .text { overflow: auto; max-height: 500px;}
+#text .close { cursor: pointer; position: absolute; right:5px; top:5px; border-radius:15px; width:20px; height:20px; background: #eaec4b; border: 2px solid #a1a130; text-align:center; font-size: 26px; line-height:20px; }
+#text .close:hover { background: #fafc5b; }
+#text h1 { margin: 0 0 10px 0; font-size: 24px; line-height: 28px; text-align: center; }
+#text h1 { margin: 0 0 10px 0; font-size: 20px; line-height: 24px; text-align: center; }
+#text p { margin: 0 0 10px 0; font-size: 14px; line-height: 18px; }
+#block_links { bottom:10px; right:10px; font-size:14px; }
+#block_links a { color:#bbb; margin-right:12px; font-weight: normal !important; }
+
+#titlelinks,.bottom_links a{
+  	font-weight: normal;
+	padding-bottom: 24px;
+	color: #bbb;
+}
+#titlelinks a,.bottom_links a {
+	color: #bbb;
+	font-weight: bold;
+	padding-right: 12px;
+}
+
+#share { padding: 10px; }
+#share .fb-like { width: 123px; overflow: hidden; }
+
+#links { padding: 10px; }
+#links a { color: silver; margin-right: 10px; font-size: 14px;}
+
+#contact { position:absolute; left:50%; margin-left:-400px; width:800px; color:#FFF; text-align:center; }
+#contact .button { position:absolute; left:50%; margin-left:-100px; right:auto; top:auto; bottom:auto; width:200px; height:75px; line-height:30px; font-weight:bold; margin-top:10px; }
+#contact input,#contact textarea { margin-top:10px;  padding: 0.5em; text-indent: 10px; border: 0; height: 30px; width: 216px; line-height: 30px; font-size: 20px; background: #ededd1; border-bottom: 6px solid #a1a18d; outline: none; }
+#contact textarea { width:400px; height:150px; padding: 0.5em; text-indent:0px; }
+#contact h1 { margin-bottom:-30px; }
+
+#pre_game #changeMode{  right: 0px; top: 2px; padding: 15px 5px; text-align: center; cursor: pointer; height: 20px; width: 310px; 
+ background: #7fed4c; border-bottom: 6px solid #56a130; margin-top:-2px; color: #4f8a34; line-height: 24px; text-transform: uppercase; font-size: 25px; }
+#pre_game #changeMode:hover{ background: #A0F17A; }
+#pre_game #changeMode:active { border: none; border-bottom:2px solid #427E25; border-top: 4px solid #333; }
+.helpinfo {
+    position: absolute;
+	width: 225px; 
+}
+.helpinfo a {
+    color: yellow;
+}
+.helpinfo a:hover{
+    color: #FFE478;
+	}
+.helpinfo a:visited {
+    color: yellow;
+	}
+.mode {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    margin-left: -160px;
+    width: 320px;
+    color: #fff;
+}
+
